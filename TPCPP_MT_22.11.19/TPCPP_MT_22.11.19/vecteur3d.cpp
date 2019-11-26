@@ -40,33 +40,20 @@ void vecteur3d::setZ(float z) {
 //Méthodes
 void vecteur3d::afficher()
 {
-	std::cout << "Bonsoir : " << this->getX() << std::endl;
+	std::cout << "< " << this->getX() << ", " << this->getY() << ", " << this->getZ() <<" >" << std::endl;
 }
-float vecteur3d::normax(vecteur3d v2)
-{
-	if ((this->x*this->y*this->z) > (v2.getX()*v2.getY()*v2.getZ())){
-		return this->x*this->y*this->z;
-	} else {
-		return v2.getX()*v2.getY()*v2.getZ();
-	}
-}
-vecteur3d vecteur3d::normal(vecteur3d v2)
-{
-	if ((this->x*this->y*this->z) > (v2.getX()*v2.getY()*v2.getZ())) {
-		return this;
-	}
-	else {
-		return v2;
-	}
-}
-/*
-int vecteur3d::coincide(vecteur3d v2)
-{
-	if (this->x == v2.getX() && this->y == v2.getY() && this->z == v2.getZ()) {
-		return 1;
-	} else {
-		return 0;
-	}
-}
-*/
 
+
+vecteur3d vecteur3d::somme(vecteur3d v2)
+{
+	vecteur3d resultat;
+	resultat.setX(this->x + v2.getX());
+	resultat.setY(this->y + v2.getY());
+	resultat.setZ(this->z + v2.getZ());
+	return resultat;
+}
+
+float vecteur3d::pScalaire(vecteur3d v2)
+{	
+	return (this->x*v2.getX())+(this->y*v2.getY())+(this->z*v2.getZ());
+}

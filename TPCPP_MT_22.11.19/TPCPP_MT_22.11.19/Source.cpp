@@ -10,14 +10,12 @@ int main()
 
 	//Programme
 	test.afficher();
-	std::cout << test.normax(test2) << std::endl;
-	
-	test.setX(5);
-	test.setY(5);
-	test.setZ(5);
-	
-	std::cout << test.normax(test2) << std::endl;
 
+	test.setX(5);
+	test2.setX(1);
+	test2.setY(8);
+	test.somme(test2).afficher();
+	std::cout << test.pScalaire(test2) << std::endl;
 	system("pause");
 	return 0;
 }
