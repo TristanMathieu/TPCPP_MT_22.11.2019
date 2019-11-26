@@ -1,21 +1,21 @@
 #include <iostream>
 #include "vecteur3d.h"
+#include "point.h"
 
 int main()
 {
 	//Initialisation
 	vecteur3d test;
 	vecteur3d test2;
-
+	point p1;
+	point p2;
+	point p3;
 
 	//Programme
-	test.afficher();
+	
+	p1.askNb();
 
-	test.setX(5);
-	test2.setX(1);
-	test2.setY(8);
-	test.somme(test2).afficher();
-	std::cout << test.pScalaire(test2) << std::endl;
 	system("pause");
+
 	return 0;
 }
