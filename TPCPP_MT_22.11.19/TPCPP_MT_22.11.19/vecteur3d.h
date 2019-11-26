@@ -24,8 +24,8 @@ public:
 
 	//Méthodes
 	void afficher();
-	int coincide(float x, float y, float z);
-	int coincide(vecteur3d v2);
-
+	//int coincide(vecteur3d v2);
+	float normax(vecteur3d v2);
+	vecteur3d normal(vecteur3d v2);
 };
 

@@ -29,7 +29,7 @@ void vecteur3d::setX(float x) {
 	this->x = x;
 }
 
-void vecteur3d::setY(float Y) {
+void vecteur3d::setY(float y) {
 	this->y = y;
 }
 
@@ -42,16 +42,24 @@ void vecteur3d::afficher()
 {
 	std::cout << "Bonsoir : " << this->getX() << std::endl;
 }
-
-int vecteur3d::coincide(float x, float y, float z)
+float vecteur3d::normax(vecteur3d v2)
 {
-	if (this->x == x && this->y == y && this->z == z) {
-		return 1; //on prend l'idée d'une valeur booleene : 1 signifie qu'elles coincides, 0 ne coincides pas
+	if ((this->x*this->y*this->z) > (v2.getX()*v2.getY()*v2.getZ())){
+		return this->x*this->y*this->z;
 	} else {
-		return 0;
+		return v2.getX()*v2.getY()*v2.getZ();
 	}
 }
-
+vecteur3d vecteur3d::normal(vecteur3d v2)
+{
+	if ((this->x*this->y*this->z) > (v2.getX()*v2.getY()*v2.getZ())) {
+		return this;
+	}
+	else {
+		return v2;
+	}
+}
+/*
 int vecteur3d::coincide(vecteur3d v2)
 {
 	if (this->x == v2.getX() && this->y == v2.getY() && this->z == v2.getZ()) {
@@ -60,3 +68,5 @@ int vecteur3d::coincide(vecteur3d v2)
 		return 0;
 	}
 }
+*/
+
