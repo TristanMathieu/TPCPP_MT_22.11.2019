@@ -1,5 +1,6 @@
 #gitignore CPP
 
+/ExoFinit
 /TPCPP_MT_22.11.19/.vs
 /TPCPP_MT_22.11.19/Debug
 /TPCPP_MT_22.11.19/TPCPP_MT_22.11.19/Debug
